@@ -1,3 +1,8 @@
+@keyframes animationScrollLock {
+  from {background-color: rgba(13, 29, 51, 0.0)}
+  to {background-color: rgba(13, 29, 51, 0.40)}
+}
+
 .wrapper {
   position: relative;
 
@@ -50,6 +55,17 @@
 
 .scroll-lock {
   overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation-name: animationScrollLock;
+    animation-duration: 2s;
+    background-color: rgba(13, 29, 51, 0.40);
+  }
 }
 
 .no-scrollbar {
