@@ -4,7 +4,7 @@ import {Form} from './modules/form-validate/form.js';
 import {initMenu} from './modules/menu.js';
 import {initHeroSwiper} from './modules/hero-swiper.js';
 import {initProgramsSwiper} from './modules/programs-swiper.js';
-
+import {CustomSelect} from './modules/select/custom-select';
 
 // ---------------------------------
 
@@ -20,6 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initHeroSwiper();
   initProgramsSwiper();
+  const customSelect = new CustomSelect();
+  customSelect.init();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

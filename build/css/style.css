@@ -3580,12 +3580,15 @@ button,
   border: none;
   color: #484848;
   outline: 1px solid rgba(72, 72, 72, 0.3);
+  height: auto;
+  max-height: 240px;
 }
 
 .modal-form__select-item {
   padding: 17px 20px;
 }
 .modal-form__select-item:not([aria-selected=true]):hover {
+  background-color: #ffffff;
   color: #316dc2;
 }
 .modal-form__select-item:not([aria-selected=true]):hover:active {
