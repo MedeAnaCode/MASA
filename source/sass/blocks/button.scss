@@ -9,7 +9,7 @@
   word-break: break-word;
   cursor: pointer;
   color: $color-cerulean-blue;
-  background-color: $color-default-white;
+  background-color: transparent;
   width: fit-content;
 
   span {
@@ -122,7 +122,8 @@
     }
   }
 
-  &:focus-visible {
+  &:focus-visible,
+  &:focus {
     outline: none;
     background-color: $color-default-white;
     color: $color-cerulean-blue;
@@ -144,5 +145,17 @@
       stroke: rgba($color-default-white, 0.7);
       transform: rotate(45deg);
     }
+  }
+}
+
+.button:disabled,
+.button--disabled {
+  border-color: $color-mischka;
+  color: $color-mischka;
+  cursor: unset;
+  pointer-events: none;
+
+  .button__icon-wrapper {
+    background-color: $color-mischka;
   }
 }

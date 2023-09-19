@@ -1,4 +1,5 @@
 .about {
+  background-color: $color-alabaster;
   padding-top: 125px;
 
   @include vp-1199 {
@@ -164,12 +165,12 @@
   height: 100%;
   padding: 30px 60px;
   display: flex;
+  align-items: center;
   gap: 20px;
   justify-content: space-between;
 
   outline: 1px solid $color-alabaster;
   border-radius: 20px;
-
 
   @include vp-1199 {
     display: flex;
@@ -181,6 +182,7 @@
   @include vp-767 {
     padding: 21px 18px 21px 20px;
     gap: 5px;
+    align-items: flex-start;
   }
 
   @media (min-width: 350px) and (max-width: 767px) {

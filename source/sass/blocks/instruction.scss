@@ -145,7 +145,7 @@
 
   list-style: none;
 
-  counter-reset: section;
+  counter-reset: number;
 
   @include vp-1199 {
     display: grid;
@@ -184,8 +184,8 @@
 
     background-color: $color-cerulean-blue;
 
-    counter-increment: section;
-    content: counter(section);
+    counter-increment: number;
+    content: counter(number);
 
     @include vp-767 {
       top: -7px;

@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form.js';
 import {initMenu} from './modules/menu.js';
 import {initHeroSwiper} from './modules/hero-swiper.js';
 import {initProgramsSwiper} from './modules/programs-swiper.js';
+import {initNewsSwiper} from './modules/news-swiper.js';
 import {CustomSelect} from './modules/select/custom-select';
 
 // ---------------------------------
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initHeroSwiper();
   initProgramsSwiper();
+  initNewsSwiper();
   const customSelect = new CustomSelect();
   customSelect.init();
 
