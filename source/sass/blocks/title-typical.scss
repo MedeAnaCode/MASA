@@ -17,4 +17,10 @@
       line-height: 20px;
     }
   }
+
+  &--light {
+    h2 {
+      color: $color-default-white;
+    }
+  }
 }

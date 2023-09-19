@@ -1,6 +1,5 @@
 const initHeroSwiper = () => {
   if (document.body.contains(document.querySelector('.hero-block__slider'))) {
-    // eslint-disable-next-line no-new
     new Swiper('.hero-block__slider', {
       loop: true,
       pagination: {
@@ -23,10 +22,10 @@ const initHeroSwiper = () => {
         },
       },
 
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
     });
   }
 };
