@@ -1,3 +1,5 @@
+import L from '../vendor/leaflet.js';
+
 const MAP_OPTIONS = {
   center: [55.02547366716361, 82.92681588910514],
   zoom: 15,
@@ -39,6 +41,7 @@ const initMap = () => {
     pinOptions = ICON_OPTIONS.desktop;
   }
 
+  // eslint-disable-next-line
   map = new L.map('map', MAP_OPTIONS);
   map.setView([55.0287159597826, 82.9282572861872], 14);
   LAYER.addTo(map);
@@ -47,7 +50,6 @@ const initMap = () => {
   let marker = new L.Marker([55.0287159597826, 82.9282572861872], {icon: pin});
   marker.addTo(map);
 };
-
 
 const onWindowResize = () => {
   map.remove();

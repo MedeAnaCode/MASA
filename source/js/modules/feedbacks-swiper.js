@@ -1,5 +1,8 @@
+import Swiper from '../vendor/swiper.js';
+
 const initFeedbacksSwiper = () => {
   if (document.body.contains(document.querySelector('.feedbacks__slider'))) {
+    // eslint-disable-next-line no-new
     new Swiper('.feedbacks__slider', {
       scrollbar: {
         el: '.feedbacks__scrollbar',

@@ -1,5 +1,8 @@
+import Swiper from '../vendor/swiper.js';
+
 const initNewsSwiper = () => {
   if (document.body.contains(document.querySelector('.news__slider'))) {
+    // eslint-disable-next-line no-new
     new Swiper('.news__slider', {
       loop: false,
 

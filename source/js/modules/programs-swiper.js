@@ -1,5 +1,8 @@
+import Swiper from '../vendor/swiper.js';
+
 const initProgramsSwiper = () => {
   if (document.body.contains(document.querySelector('.programs__slider'))) {
+    // eslint-disable-next-line no-new
     new Swiper('.programs__slider', {
       scrollbar: {
         el: '.programs__scrollbar',
