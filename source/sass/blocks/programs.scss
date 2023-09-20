@@ -96,7 +96,7 @@
   justify-content: flex-end;
 
   border-radius: 12px;
-  background-color: $color-mischka;
+  background-color: $color-charcoal;
 
   picture,
   img {
@@ -224,7 +224,6 @@
 
 .programs__slide-button {
   padding: 0;
-
   box-shadow: none;
 
   @include vp-767 {
@@ -283,16 +282,13 @@
 .programs__scrollbar {
   width: 100%;
   flex-grow: 1;
-
   height: 2px;
-
   background-color: rgba(49, 109, 194, 0.2);
   border-radius: 0;
 
   div {
     width: 392px;
     height: 2px;
-
     background-color: $color-cerulean-blue;
     border-radius: 0;
     cursor: pointer;
@@ -308,7 +304,6 @@
   justify-self: end;
   padding: 6px;
   gap: 11px;
-
   transform: translateX(7px);
 
   @include vp-1199 {
@@ -319,7 +314,6 @@
     margin-left: auto;
     margin-right: 0;
     gap: 7px;
-
     transform: none;
   }
 }

@@ -4,8 +4,11 @@ import {Form} from './modules/form-validate/form.js';
 import {initMenu} from './modules/menu.js';
 import {initHeroSwiper} from './modules/hero-swiper.js';
 import {initProgramsSwiper} from './modules/programs-swiper.js';
+import {initFeedbacksSwiper} from './modules/feedbacks-swiper.js';
 import {initNewsSwiper} from './modules/news-swiper.js';
-import {CustomSelect} from './modules/select/custom-select';
+import {CustomSelect} from './modules/select/custom-select.js';
+import {initAccordions} from './vendor/init-accordion.js';
+import {initMap, setWindowResize} from './modules/map.js';
 
 // ---------------------------------
 
@@ -21,9 +24,13 @@ window.addEventListener('DOMContentLoaded', () => {
   initMenu();
   initHeroSwiper();
   initProgramsSwiper();
+  initFeedbacksSwiper();
   initNewsSwiper();
+  initAccordions();
   const customSelect = new CustomSelect();
   customSelect.init();
+  initMap();
+  setWindowResize();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

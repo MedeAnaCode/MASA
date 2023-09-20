@@ -20,17 +20,17 @@
 .hero-block__slider-background {
   position: relative;
   background-repeat: no-repeat;
-  background-color: rgba(2, 102, 193, 1);
+  background-color: $color-charcoal;
   object-fit: cover;
   background-size: cover;
   width: 100%;
   height: 100%;
-  min-height: 55.555vw;
+  min-height: 55.55vw;
   align-items: flex-end;
   display: flex;
 
   @include vp-1199 {
-    min-height: 133.333vw;
+    min-height: 133.33vw;
   }
 
   @include vp-767 {
@@ -38,6 +38,7 @@
   }
 }
 
+/* stylelint-disable */
 .hero-block__slider-background--first {
   background-image: url("../img/hero-block/background-1-desktop-1x.jpg");
 
@@ -163,6 +164,7 @@
         url("../img/hero-block/background-3-mobile-1x.jpg") type("image/jpg") 1x);
   }
 }
+/* stylelint-enable */
 
 .hero-block__slider-container {
   position: relative;
@@ -210,7 +212,7 @@
   @include vp-767 {
     padding: 10px 12px;
     max-width: 80px;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 12px 12px 0 0;
     min-height: 28px;
     padding-bottom: 11px;
   }
@@ -247,7 +249,7 @@
   margin-bottom: -1px;
   max-width: 968px;
   padding: 29px 50px 10px;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0 30px 30px 0;
   min-height: 187px;
   display: flex;
   align-items: center;
@@ -261,7 +263,7 @@
   @include vp-767 {
     padding: 23px 14px 10px;
     max-width: 100%;
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 0 16px 16px 0;
     min-height: 41.88vw;
   }
 
@@ -281,8 +283,8 @@
     }
 
     @include vp-767 {
-      font-size: 6.875vw;
-      line-height: 8.125vw;
+      font-size: 6.88vw;
+      line-height: 8.13vw;
     }
   }
 }
@@ -342,7 +344,7 @@
   max-width: 446px;
 
   @include vp-1199 {
-    max-width: 55.773%;
+    max-width: 55.77%;
   }
 
   @include vp-767 {
@@ -350,7 +352,7 @@
     padding: 0 14px 11px 14px;
     border-radius: 0 0 14px 0;
     margin-top: -1px;
-    min-height: 28.4375vw;
+    min-height: 28.44vw;
     display: flex;
     align-items: center;
   }
@@ -366,7 +368,7 @@
 
     @include vp-767 {
       line-height: 6.25vw;
-      font-size: 4.375vw;
+      font-size: 4.38vw;
     }
   }
 }
@@ -376,13 +378,13 @@
   max-width: 197px;
 
   @include vp-767 {
-    max-width: 69.7318007662835%;
-    width: 69.7318007662835%;
+    max-width: 69.73%;
+    width: 69.73%;
     padding: 10px 15px;
-    border-radius: 0px 0px 14px 14px;
+    border-radius: 0 0 14px 14px;
     position: relative;
     margin-top: -1px;
-    min-height: 19.375vw;
+    min-height: 19.38vw;
     display: flex;
     align-items: center;
 

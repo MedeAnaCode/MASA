@@ -1,6 +1,11 @@
 @keyframes animationScrollLock {
-  from {background-color: rgba(13, 29, 51, 0.0)}
-  to {background-color: rgba(13, 29, 51, 0.40)}
+  from {
+    background-color: rgba(13, 29, 51, 0);
+  }
+
+  to {
+    background-color: rgba(13, 29, 51, 0.4);
+  }
 }
 
 .wrapper {
@@ -64,7 +69,7 @@
     z-index: 2;
     animation-name: animationScrollLock;
     animation-duration: 2s;
-    background-color: rgba(13, 29, 51, 0.40);
+    background-color: rgba(13, 29, 51, 0.4);
   }
 }
 

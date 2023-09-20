@@ -11,8 +11,13 @@
 }
 
 @keyframes animation {
-  from {height: 0px}
-  to {height: 278px}
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 278px;
+  }
 }
 
 .page-header__nav {
@@ -190,7 +195,7 @@
   }
 
   &:disabled,
-  &--disabled{
+  &--disabled {
     opacity: 0.2;
   }
 }
@@ -270,9 +275,10 @@
 
 .page-header__submenu.is-opened .page-header__submenu-button {
   margin-bottom: 12px;
+  color: $color-default-white;
 }
 
-.page-header__submenu-icon  {
+.page-header__submenu-icon {
   stroke: $color-default-white;
   opacity: 0.7;
 }
@@ -290,10 +296,6 @@
   text-transform: uppercase;
   margin-right: 11px;
   max-width: 250px;
-}
-
-.page-header__submenu.is-opened .page-header__submenu-button {
-  color: $color-default-white;
 }
 
 .page-header__submenu-item {

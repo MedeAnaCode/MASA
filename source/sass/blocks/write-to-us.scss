@@ -1,0 +1,480 @@
+.write-to-us {
+  position: relative;
+  padding-top: 121px;
+
+  @include vp-1199 {
+    padding-top: 99px;
+  }
+
+  @include vp-767 {
+    padding-top: 66px;
+  }
+
+  h2 {
+    margin-bottom: 14px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 11px;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 7px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 18px;
+    text-align: center;
+
+    @include vp-1199 {
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  picture,
+  img {
+    background-color: $color-charcoal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: content-box;
+    border-radius: 16px;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.write-to-us__content {
+  position: relative;
+  border-radius: 16px;
+  background-color: #316dc2;
+}
+
+.write-to-us__container {
+  position: relative;
+  z-index: 1;
+  width: 40.2%;
+  padding: 89px 74px 51px;
+  color: $color-alabaster;
+  border-radius: 16px;
+  background-color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    width: 65.2%;
+    padding: 61px 46px 58px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 54px 15px 50px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 32px;
+    color: $color-default-white;
+    text-align: left;
+
+    @include vp-1199 {
+      margin-bottom: 26px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 18px;
+    }
+  }
+
+  p {
+    margin-bottom: 17px;
+    text-align: left;
+    opacity: 0.9;
+
+    @include vp-1199 {
+      margin-bottom: 31px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+.write-to-us__form-wrapper {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    @include vp-1199 {
+      gap: 16px;
+    }
+
+    @include vp-767 {
+      gap: 21px;
+    }
+  }
+}
+
+.write-to-us__input-wrapper {
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    @include vp-767 {
+      gap: 13px;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.8;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 25px;
+
+    font-size: 16px;
+    font-family: "Manrope", "Arial", sans-serif;
+
+    border-radius: 8px;
+    border: none;
+    color: $color-default-white;
+
+    background-color: transparent;
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+
+    @include vp-767 {
+      width: 100%;
+      padding: 14px 25px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      outline: 1px solid $color-default-white;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-visible {
+      outline: 1px solid $color-default-white;
+    }
+
+    &:disabled {
+      border: 1px solid $color-default-white;
+      opacity: 0.4;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  input {
+    min-height: 50px;
+
+    @include vp-767 {
+      min-height: 47px;
+    }
+  }
+
+  textarea {
+    min-height: 98px;
+
+    @include vp-767 {
+      min-height: 92px;
+    }
+  }
+
+  &.is-invalid {
+    input,
+    textarea {
+      border: 1px solid $color-wild-watermelon;
+      background-color: rgba(255, 94, 102, 0.2);
+    }
+  }
+}
+
+.write-to-us__select {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  span {
+    display: block;
+    margin-bottom: 7px;
+
+    @include vp-767 {
+      margin-bottom: 15px;
+
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &.is-invalid {
+    .write-to-us__select-button {
+      border: 1px solid $color-wild-watermelon;
+    }
+  }
+}
+
+.write-to-us__select-button {
+  min-height: 50px;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Manrope", "Arial", sans-serif;
+  border-radius: 8px;
+  border: none;
+  padding: 16px 21px;
+  margin-top: 9px;
+  margin-bottom: 5px;
+  color: $color-default-white;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+
+  @include vp-1199 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
+  @include vp-767 {
+    height: 41px;
+    min-height: 47px;
+    padding: 12px 19px;
+    font-size: 10px;
+  }
+
+  &:hover {
+    outline: 1px solid $color-default-white;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid $color-default-white;
+  }
+
+  span:not(.write-to-us__select-icon) {
+    margin: 0;
+  }
+}
+
+.write-to-us__select-icon {
+  margin-top: auto;
+  background-color: $color-default-white;
+  margin-left: auto;
+}
+
+.write-to-us__select-list {
+  bottom: -4px;
+  height: auto;
+  max-height: 240px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Manrope", "Arial", sans-serif;
+  border-radius: 8px;
+  border: none;
+  color: $color-charcoal;
+  background-color: $color-default-white;
+}
+
+.write-to-us__select-item {
+  padding: 17px 20px;
+
+  &:not([aria-selected="true"]) {
+    &:hover {
+      color: $color-cerulean-blue;
+
+      &:active {
+        color: $color-default-white;
+        background-color: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+
+  &[aria-selected="true"] {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+}
+
+.write-to-us__checkbox {
+  margin-bottom: 24px;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
+
+  label {
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: 10px;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &:hover {
+    & .write-to-us__checkbox-icon {
+      border: 1px solid $color-default-white;
+    }
+
+    input[type="checkbox"]:checked ~ .write-to-us__checkbox-icon {
+      background-color: transparent;
+      border: 1px solid $color-default-white;
+
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    .write-to-us__checkbox-icon {
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  span:not(.form__checkbox-icon) {
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0.9;
+  }
+
+  &.is-invalid {
+    .write-to-us__checkbox-icon {
+      border: 1px solid $color-wild-watermelon;
+      opacity: 0.7;
+      background: rgba(255, 94, 102, 0.2);
+    }
+  }
+}
+
+.write-to-us__checkbox-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    margin: auto;
+    width: 8px;
+    height: 6px;
+    mask-image: url("../img/svg/checkbox.svg");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: transparent;
+  }
+
+  &:hover {
+    border: 1px solid $color-default-white;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-default-white;
+  }
+
+  &:disabled {
+    border: 1px solid $color-default-white;
+    background-color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+  }
+}
+
+input[type="checkbox"]:checked ~ .write-to-us__checkbox-icon {
+  background-color: $color-default-white;
+
+  &::after {
+    background-color: $color-cerulean-blue;
+  }
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-mischka;
+    pointer-events: none;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.write-to-us__button {
+  width: 100%;
+  gap: 30px;
+  margin: 0 auto;
+  background-color: transparent;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 4px;
+    gap: 0;
+  }
+
+  span,
+  .write-to-us__button-icon {
+    margin-left: auto;
+  }
+}
