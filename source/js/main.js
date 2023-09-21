@@ -23,22 +23,23 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initMenu();
   initHeroSwiper();
-  initProgramsSwiper();
-  initFeedbacksSwiper();
-  initNewsSwiper();
-  initAccordions();
-  const customSelect = new CustomSelect();
-  customSelect.init();
-  initMap();
-  setWindowResize();
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initProgramsSwiper();
+    initFeedbacksSwiper();
+    initNewsSwiper();
+    initAccordions();
+    const customSelect = new CustomSelect();
+    customSelect.init();
+    initMap();
+    setWindowResize();
     initModals();
     const form = new Form();
-    window.form = form;
     form.init();
+    window.form = form;
   });
 });
 

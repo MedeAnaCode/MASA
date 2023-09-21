@@ -1,11 +1,10 @@
-import L from '../vendor/leaflet.js';
-
 const MAP_OPTIONS = {
-  center: [55.02547366716361, 82.92681588910514],
+  center: [55.385044, 82.486671],
   zoom: 15,
   scrollWheelZoom: false,
 };
 
+// eslint-disable-next-line
 const LAYER = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
 });
@@ -40,16 +39,17 @@ const initMap = () => {
   } else {
     pinOptions = ICON_OPTIONS.desktop;
   }
-
   // eslint-disable-next-line
   map = new L.map('map', MAP_OPTIONS);
-  map.setView([55.0287159597826, 82.9282572861872], 14);
+  map.setView([55.02871595978264, 82.92825728618725], 14);
   LAYER.addTo(map);
-
+  // eslint-disable-next-line
   let pin = L.icon(pinOptions);
-  let marker = new L.Marker([55.0287159597826, 82.9282572861872], {icon: pin});
+  // eslint-disable-next-line
+  let marker = new L.Marker([55.02871595978264, 82.92825728618725], {icon: pin});
   marker.addTo(map);
 };
+
 
 const onWindowResize = () => {
   map.remove();
