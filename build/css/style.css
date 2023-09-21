@@ -3425,10 +3425,6 @@ button,
   background-color: #316dc2;
 }
 
-.swiper-pagination-bullet:focus-visible {
-  outline: none;
-}
-
 .hero-block__title {
   background-color: #ffffff;
   margin: 0;
@@ -3841,6 +3837,11 @@ button,
   outline: 1px solid #f0efe9;
   border-radius: 20px;
 }
+@media (max-width: 1300px) {
+  .about__advantages-item {
+    padding: 30px;
+  }
+}
 @media (max-width: 1199px) {
   .about__advantages-item {
     display: -webkit-box;
@@ -4077,6 +4078,14 @@ button,
   display: block;
   margin-bottom: 7px;
 }
+.modal-form__select .modal-form__select-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  width: 15px;
+  height: 6px;
+  background-color: #484848;
+}
 .modal-form__select.is-invalid .modal-form__select-button {
   border: 1px solid #ff5e66;
 }
@@ -4109,11 +4118,6 @@ button,
 }
 .modal-form__select-button span:not(.modal-form__select-icon) {
   margin: 0;
-}
-
-.modal-form__select-icon {
-  margin-top: auto;
-  background-color: #484848;
 }
 
 .modal-form__select-list {
@@ -6604,6 +6608,21 @@ input[type=checkbox]:checked ~ .modal-form__checkbox-icon:disabled::after {
     line-height: 14px;
   }
 }
+.write-to-us__select .write-to-us__select-icon {
+  width: 15px;
+  height: 6px;
+  margin-top: auto;
+  background-color: #ffffff;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+@media (max-width: 767px) {
+  .write-to-us__select .write-to-us__select-icon {
+    margin-top: auto;
+    background-color: #ffffff;
+    margin-bottom: auto;
+  }
+}
 .write-to-us__select.is-invalid .write-to-us__select-button {
   border: 1px solid #ff5e66;
 }
@@ -6643,12 +6662,6 @@ input[type=checkbox]:checked ~ .modal-form__checkbox-icon:disabled::after {
 }
 .write-to-us__select-button span:not(.write-to-us__select-icon) {
   margin: 0;
-}
-
-.write-to-us__select-icon {
-  margin-top: auto;
-  background-color: #ffffff;
-  margin-left: auto;
 }
 
 .write-to-us__select-list {
@@ -6718,7 +6731,7 @@ input[type=checkbox]:checked ~ .modal-form__checkbox-icon:disabled::after {
 .write-to-us__checkbox input[type=checkbox] {
   display: none;
 }
-.write-to-us__checkbox span:not(.form__checkbox-icon) {
+.write-to-us__checkbox span:not(.write-to-us__checkbox-icon) {
   font-size: 12px;
   line-height: 12px;
   opacity: 0.9;
@@ -6906,6 +6919,7 @@ input[type=checkbox]:checked ~ .write-to-us__checkbox-icon:disabled::after {
     gap: 15px;
     margin-left: auto;
     min-width: 80vw;
+    max-width: 80%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;

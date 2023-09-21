@@ -236,6 +236,21 @@
     }
   }
 
+  .write-to-us__select-icon {
+    width: 15px;
+    height: 6px;
+    margin-top: auto;
+    background-color: $color-default-white;
+    margin-bottom: auto;
+    margin-left: auto;
+
+    @include vp-767 {
+      margin-top: auto;
+      background-color: $color-default-white;
+      margin-bottom: auto;
+    }
+  }
+
   &.is-invalid {
     .write-to-us__select-button {
       border: 1px solid $color-wild-watermelon;
@@ -281,12 +296,6 @@
   span:not(.write-to-us__select-icon) {
     margin: 0;
   }
-}
-
-.write-to-us__select-icon {
-  margin-top: auto;
-  background-color: $color-default-white;
-  margin-left: auto;
 }
 
 .write-to-us__select-list {
@@ -371,7 +380,7 @@
     display: none;
   }
 
-  span:not(.form__checkbox-icon) {
+  span:not(.write-to-us__checkbox-icon) {
     font-size: 12px;
     line-height: 12px;
     opacity: 0.9;

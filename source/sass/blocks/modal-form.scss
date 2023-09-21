@@ -131,6 +131,15 @@
     margin-bottom: 7px;
   }
 
+  .modal-form__select-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 15px;
+    height: 6px;
+    background-color: $color-charcoal;
+  }
+
   &.is-invalid {
     .modal-form__select-button {
       border: 1px solid $color-wild-watermelon;
@@ -171,11 +180,6 @@
   span:not(.modal-form__select-icon) {
     margin: 0;
   }
-}
-
-.modal-form__select-icon {
-  margin-top: auto;
-  background-color: $color-charcoal;
 }
 
 .modal-form__select-list {
