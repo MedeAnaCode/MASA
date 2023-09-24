@@ -15,6 +15,12 @@
   @include vp-767 {
     min-height: 177.5vw;
   }
+
+  button,
+  a,
+  .hero-block__pagination-bullet {
+    display: none;
+  }
 }
 
 .hero-block__slider-background {
@@ -399,4 +405,15 @@
 
 .hero-block__button {
   background-color: $color-default-white;
+}
+
+.hero-block__slide.swiper-slide-active {
+  a {
+    display: flex;
+  }
+
+  button,
+  .hero-block__pagination-bullet {
+    display: block;
+  }
 }

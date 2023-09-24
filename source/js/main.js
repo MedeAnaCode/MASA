@@ -9,6 +9,7 @@ import {initNewsSwiper} from './modules/news-swiper.js';
 import {CustomSelect} from './modules/select/custom-select.js';
 import {initAccordions} from './vendor/init-accordion.js';
 import {initMap, setWindowResize} from './modules/map.js';
+import {setFocus} from './modules/modalInputFocus.js';
 
 // ---------------------------------
 
@@ -37,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     setWindowResize();
     initModals();
+    setFocus();
     const form = new Form();
     form.init();
     window.form = form;
