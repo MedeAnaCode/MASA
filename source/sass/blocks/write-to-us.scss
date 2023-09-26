@@ -163,13 +163,12 @@
 
     font-size: 16px;
     font-family: "Manrope", "Arial", sans-serif;
-
     border-radius: 8px;
-    border: none;
     color: $color-default-white;
-
     background-color: transparent;
-    outline: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-y: scroll;
 
     @include vp-767 {
       width: 100%;
@@ -178,13 +177,13 @@
     }
 
     &:hover {
-      outline: 1px solid $color-default-white;
+      border: 1px solid $color-default-white;
     }
 
     &:active,
     &:focus,
     &:focus-visible {
-      outline: 1px solid $color-default-white;
+      border: 1px solid $color-default-white;
     }
 
     &:disabled {
@@ -203,10 +202,10 @@
   }
 
   textarea {
-    min-height: 98px;
+    height: 98px;
 
     @include vp-767 {
-      min-height: 92px;
+      height: 92px;
     }
   }
 
@@ -264,12 +263,12 @@
   font-size: 16px;
   font-family: "Manrope", "Arial", sans-serif;
   border-radius: 8px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 16px 21px;
   margin-top: 9px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   color: $color-default-white;
-  outline: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
 
   @include vp-1199 {
     margin-top: 5px;
@@ -284,13 +283,13 @@
   }
 
   &:hover {
-    outline: 1px solid $color-default-white;
+    border: 1px solid $color-default-white;
   }
 
   &:active,
   &:focus,
   &:focus-visible {
-    outline: 1px solid $color-default-white;
+    border: 1px solid $color-default-white;
   }
 
   span:not(.write-to-us__select-icon) {
@@ -314,6 +313,10 @@
 .write-to-us__select-item {
   padding: 17px 20px;
 
+  &:hover:not(.focus-visible) {
+    background-color: $color-default-white;
+  }
+
   &:not([aria-selected="true"]) {
     &:hover {
       color: $color-cerulean-blue;
@@ -332,7 +335,8 @@
     background-color: $color-cerulean-blue;
   }
 
-  &[aria-selected="true"] {
+  &[aria-selected="true"],
+  &[aria-selected="true"]:hover:not(.focus-visible) {
     color: $color-default-white;
     background-color: $color-cerulean-blue;
   }
@@ -459,14 +463,26 @@ input[type="checkbox"]:checked ~ .write-to-us__checkbox-icon {
       background-color: $color-default-white;
     }
   }
+}
 
-  &:disabled {
-    background-color: $color-mischka;
-    pointer-events: none;
+input[type="checkbox"]:disabled ~ .write-to-us__checkbox-icon {
+  background-color: rgba($color-default-white, 0.6);
+  pointer-events: none;
+  cursor: unset;
 
-    &::after {
-      background-color: $color-default-white;
-    }
+  &::after {
+    background-color: transparent;
+  }
+}
+
+input[type="checkbox"]:checked:disabled ~ .write-to-us__checkbox-icon {
+  background-color: $color-mischka;
+  border-color: $color-mischka;
+  pointer-events: none;
+  cursor: unset;
+
+  &::after {
+    background-color: $color-default-white;
   }
 }
 
@@ -485,5 +501,23 @@ input[type="checkbox"]:checked ~ .write-to-us__checkbox-icon {
   span,
   .write-to-us__button-icon {
     margin-left: auto;
+  }
+}
+
+.write-to-us__checkbox.focus-visible {
+  outline: none;
+
+  .write-to-us__checkbox-icon {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+  }
+
+  input[type="checkbox"]:checked ~ .write-to-us__checkbox-icon {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+
+    &::after {
+      background-color: $color-default-white;
+    }
   }
 }

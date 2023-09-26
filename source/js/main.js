@@ -10,6 +10,8 @@ import {CustomSelect} from './modules/select/custom-select.js';
 import {initAccordions} from './vendor/init-accordion.js';
 import {initMap, setWindowResize} from './modules/map.js';
 import {setFocus} from './modules/modalInputFocus.js';
+import {initCheckboxes} from './modules/checkbox.js';
+import {initNewsButtons} from './modules/news-buttons.js';
 
 // ---------------------------------
 
@@ -32,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initProgramsSwiper();
     initFeedbacksSwiper();
     initNewsSwiper();
+    initNewsButtons();
     initAccordions();
     const customSelect = new CustomSelect();
     customSelect.init();
@@ -42,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     form.init();
     window.form = form;
+    initCheckboxes();
   });
 });
 

@@ -1,15 +1,15 @@
 .faq {
   padding-top: 64px;
-  padding-bottom: 64px;
+  padding-bottom: 47px;
 
   @include vp-1199 {
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 34px;
   }
 
   @include vp-767 {
     padding-top: 37px;
-    padding-bottom: 37px;
+    padding-bottom: 32px;
   }
 }
 
@@ -28,316 +28,236 @@
 }
 
 .faq__accordion {
+  list-style-type: none;
+  padding: 0 106px;
   margin: 0 auto;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 83%;
-  list-style-type: none;
+  gap: 10px;
+  width: 100%;
 
   @include vp-1199 {
-    width: 100%;
-    gap: 11px;
-  }
-
-  @include vp-767 {
-    gap: 10px;
+    padding: 0;
   }
 }
 
-
 .faq__accordion-element {
-  h3 {
-    margin: 0;
-    max-width: 624px;
+  width: 100%;
+  height: 100%;
+  color: $color-cerulean-blue;
+  background-color: $color-alabaster;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
 
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 29px;
-    color: $color-cerulean-blue;
-
-    @include vp-1199 {
-      margin: auto 0;
-
-      font-size: 22px;
-      line-height: 23px;
-    }
-
-    @include vp-767 {
-      font-size: 16px;
-      line-height: 18px;
-    }
+  @include vp-767 {
+    border-radius: 14px;
   }
 
+  &:hover,
+  &:focus-visible {
+    background-color: $color-default-white;
 
-  &:hover {
-    .faq__item {
-      background-color: $color-default-white;
-    }
-
-    .faq__button {
-      background-color: transparent;
-      outline: 1px solid $color-cerulean-blue;
-
-      &::after,
-      &::before {
-        background-color: $color-cerulean-blue;
-      }
+    .faq__accordion-button::after {
+      border: 1px solid $color-cerulean-blue;
+      background: $color-default-white url("../img/svg/plus-hover.svg") no-repeat center / 20px 20px;
+      stroke: $color-cerulean-blue;
     }
   }
 
   &:active {
-    .faq__item {
+    .faq__accordion-button {
       color: $color-endeavour;
     }
 
-    h3 {
-      color: $color-endeavour;
-    }
-
-    .faq__button {
-      background-color: $color-endeavour;
-      outline: none;
-
-      &::after,
-      &::before {
-        background-color: $color-default-white;
-      }
-    }
-  }
-
-  &:focus,
-  &:focus-visible {
-    .faq__item {
-      background-color: $color-default-white;
-    }
-
-    .faq__button {
-      background-color: transparent;
-      outline: 1px solid $color-cerulean-blue;
-
-      &::after,
-      &::before {
-        background-color: $color-cerulean-blue;
-      }
+    .faq__accordion-button::after {
+      background: $color-endeavour url("../img/svg/plus.svg") no-repeat center / 20px 20px;
     }
   }
 }
 
-.faq__item {
-  padding: 40px 40px 33px;
+.faq__accordion-button {
+  position: relative;
+  padding: 42px 40px 33px;
+  padding-right: 120px;
   min-height: 118px;
-  outline: 1px solid $color-cerulean-blue;
+  width: 100%;
+  text-align: start;
+  color: $color-cerulean-blue;
+  background-color: inherit;
+  border: none;
   border-radius: 16px;
-  background-color: transparent;
   cursor: pointer;
+  outline: none;
 
   @include vp-1199 {
-    padding: 28px 30px 28px;
+    padding: 28px 30px;
+    padding-right: 100px;
     min-height: 98px;
   }
 
   @include vp-767 {
     padding: 20px 15px;
     min-height: 79px;
-  }
-}
-
-.faq__item-wrapper {
-  display: grid;
-  grid-template-columns: auto min-content;
-  justify-content: space-between;
-  column-gap: 200px;
-
-  @include vp-1199 {
-    column-gap: 30px;
-  }
-
-  @include vp-767 {
-    align-items: center;
-    column-gap: 3px;
-  }
-}
-
-.faq__button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: $color-cerulean-blue;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-
-  &::after,
-  &::before {
-    position: absolute;
-    content: "";
-
-    background-color: $color-default-white;
+    border-radius: 14px;
   }
 
   &::after {
-    width: 1px;
-    height: 20px;
-  }
+    position: absolute;
+    content: "";
+    top: 39px;
+    right: 39px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: $color-cerulean-blue url("../img/svg/plus.svg") no-repeat center / 20px 20px;
 
-  &::before {
-    width: 20px;
-    height: 1px;
-  }
+    @include vp-1199 {
+      top: 29px;
+      right: 29px;
+    }
 
-  &:hover {
-    background-color: transparent;
-    outline: 1px solid $color-cerulean-blue;
-
-    &::after,
-    &::before {
-      background-color: $color-cerulean-blue;
+    @include vp-767 {
+      top: 50%;
+      right: 14px;
+      transform: translateY(-50%);
     }
   }
 
+  &:hover,
+  &.focus-visible {
+    background-color: $color-default-white;
+
+    &::after {
+      border: 1px solid $color-cerulean-blue;
+      background: $color-default-white url("../img/svg/plus-hover.svg") no-repeat center / 20px 20px;
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    color: $color-endeavour;
+
+    &::after {
+      background: $color-endeavour url("../img/svg/plus.svg") no-repeat center / 20px 20px;
+    }
+  }
+
+  &:disabled {
+    &::after {
+      background-color: $color-mischka;
+      pointer-events: none;
+    }
+  }
+}
+
+.faq__accordion-element.is-active {
+  padding-bottom: 23px;
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+  }
+
+  & .faq__accordion-button::after {
+    background-color: $color-default-white;
+    background-image: url("../img/svg/minus.svg");
+  }
+
+  & .faq__accordion-button {
+    padding-bottom: 0;
+    min-height: auto;
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+
+    @include vp-1199 {
+      padding-bottom: 7px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 21px;
+    }
+
+    &:focus,
+    &:focus-visible {
+      &::after {
+        border: 1px solid $color-default-white;
+        background: $color-cerulean-blue url("../img/svg/minus-hover.svg") no-repeat center / 20px 20px;
+      }
+    }
+  }
+
+  &:hover,
   &:focus,
   &:focus-visible {
-    background-color: transparent;
-    outline: 1px solid $color-cerulean-blue;
-
-    &::after,
-    &::before {
-      background-color: $color-cerulean-blue;
+    .faq__accordion-button::after {
+      border: 1px solid $color-default-white;
+      background: $color-cerulean-blue url("../img/svg/minus-hover.svg") no-repeat center / 20px 20px;
     }
   }
 
   &:active {
     background-color: $color-endeavour;
 
-    &::after,
-    &::before {
-      background-color: $color-default-white;
-    }
-  }
-
-  &:disabled {
-    background-color: $color-mischka;
-
-    &::after,
-    &::before {
-      background-color: $color-default-white;
-    }
-  }
-}
-
-.faq__item-content {
-  p {
-    width: 70%;
-    margin-top: 10px;
-
-    font-size: 16px;
-    line-height: 26px;
-    color: $color-default-white;
-
-    @include vp-1199 {
-      margin-top: 16px;
-      width: 85%;
-
-      line-height: 20px;
-    }
-
-    @include vp-767 {
-      width: 100%;
-      margin-top: 15px;
-      margin-bottom: 0;
-
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-}
-
-.faq__accordion-element.is-active {
-  .faq__item {
-    padding: 41px 40px 15px;
-    background-color: $color-cerulean-blue;
-
-    @include vp-1199 {
-      padding: 30px 30px 9px;
-    }
-
-    @include vp-767 {
-      padding: 20px 15px 13px;
-    }
-  }
-
-  h3 {
-    color: $color-default-white;
-  }
-
-  .faq__button {
-    background-color: $color-default-white;
-    outline: 1px solid $color-default-white;
-
-    &::before {
-      background-color: $color-cerulean-blue;
-    }
-
-    &::after {
-      background-color: transparent;
-    }
-  }
-
-  &:hover {
-    .faq__button {
-      background-color: transparent;
-      outline: 1px solid $color-default-white;
-
-      &::before {
-        background-color: $color-default-white;
-      }
-
-      &::after {
-        background-color: transparent;
-      }
-    }
-  }
-
-  &:active {
-    .faq__item {
+    .faq__accordion-button {
       background-color: $color-endeavour;
     }
 
-    .faq__button {
-      background-color: $color-default-white;
-
-      &::before {
-        background-color: $color-endeavour;
-      }
-
-      &::after {
-        background-color: transparent;
-      }
+    .faq__accordion-button::after {
+      background: $color-default-white url("../img/svg/minus.svg") no-repeat center / 20px 20px;
     }
   }
+}
 
-  &:focus,
-  &:focus-visible {
-    .faq__item {
-      background-color: $color-cerulean-blue;
-    }
+.faq__accordion-button span {
+  font-size: 28px;
+  line-height: 34px;
+  margin: 0;
+  display: block;
+  width: 80%;
 
-    .faq__button {
-      background-color: transparent;
-      outline: 1px solid $color-default-white;
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+    width: 100%;
+  }
 
-      &::before {
-        background-color: $color-default-white;
-      }
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+    width: 84%;
+  }
+}
 
-      &::after {
-        background-color: transparent;
-      }
-    }
+.faq__accordion-content {
+  font-size: 16px;
+  line-height: 26px;
+  margin-left: 40px;
+  width: 637px;
+
+  @include vp-1199 {
+    margin-left: 29px;
+    width: 580px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 14px;
+    width: calc(100% - 28px);
+  }
+}
+
+.faq__accordion-wrapper p {
+  margin-bottom: 0;
+
+  @include vp-767 {
+    margin-top: -4px;
   }
 }

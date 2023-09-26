@@ -86,6 +86,7 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
   border-radius: 20px;
+  user-select: none;
 
   &:hover {
     color: $color-cerulean-blue;
